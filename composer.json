@@ -1,0 +1,18 @@
+{
+    "name": "guillermomartinez/validation",
+    "description": "Validation data",
+    "authors": [
+        {
+        "name": "Guillermo M.",
+        "email": "guille_55_88@hotmail.com"
+        }
+    ],
+    "autoload": {
+        "classmap": [
+            "src/"
+        ]
+    },
+    "require-dev": {
+        "phpunit/phpunit": "5.*"
+    }
+}
