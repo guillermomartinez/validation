@@ -49,6 +49,12 @@ class Validation
 			}else{
 				return "$field es obligatorio.";
 			}
+		}elseif ($regla_nombre=='numeric') {
+			if(is_numeric($valor)){
+				return true;
+			}else{
+				return "$field no tiene un formato válido.";
+			}
 		}elseif ($regla_nombre=='min') {
 			$numero = (int) $valor;
 			if(empty($valor) || $numero>=$parametro){

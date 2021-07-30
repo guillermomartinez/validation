@@ -44,6 +44,21 @@ final class ValidationTest extends TestCase
         $errors = $validate->errors;
         $this->assertArrayHasKey('campo2', $errors);
     }
+    public function testRuleNumeric()
+    {
+        $data = [
+            "campo1" => 1,
+            "campo2" => null,
+        ];
+        $rules = [
+            "campo1" => "numeric",
+            "campo2" => "numeric",
+        ];
+        $validate = Validation::make($data,$rules);
+        $this->assertEquals(true,$validate->fails());
+        $errors = $validate->errors;
+        $this->assertArrayHasKey('campo2', $errors);
+    }
     public function testRuleMin()
     {
         $data = [
